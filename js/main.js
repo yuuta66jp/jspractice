@@ -1,15 +1,16 @@
 'user strict';
 
-// 定数 const
-// 変数 let var
+function showAd(message = 'Ad') {
+  console.log('----------')
+  console.log(`----${message}----`)
+  console.log('----------')
+}
 
-
-let price = 150;
-
-console.log(price * 140);
-console.log(price * 160);
-
-price = 170;
-
-console.log(price * 140);
-console.log(price * 160);
+showAd('Header Ad');
+console.log('Tom is great!')
+console.log('Bob is great!')
+// showAd('Ad');
+showAd();
+console.log('Steve is great!')
+console.log('Richard is great!')
+showAd('Footer Ad');
