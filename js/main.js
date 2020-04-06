@@ -1,29 +1,21 @@
 'user strict';
 
-// const sum = function(a, b, c) {
-//   return a + b + c;
-// };
-
-// const sum = (a, b, c) => a + b + c;
-
-// const total = sum(1, 2, 3) + sum(3, 4, 5);
-// console.log(total)
-// const double = function(a) {
-//   return a * 2;
-// };
-// const double = a => a * 2;
-// console.log(double(12));
-
-// const x = 2;
-
-// function f() {
-//   // const x = 1;
-//   console.log(x);
-// }
-
-// f();
-// console.log(x);
 {
-  const x = 100;
-  console.log(x);
+
+// const point = {
+//   x: 100,
+//   y: 180,
+// };
+
+// const keys = Object.keys(point);
+// keys.forEach(key => {
+//   console.log(`Key: ${key} Value: ${point[key]}`);
+// })
+
+const points = [
+  {x: 30, y: 20},
+  {x: 10, y: 50},
+  {x: 40, y: 40},
+];
+console.log(points[1].y);
 }
