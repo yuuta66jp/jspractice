@@ -1,21 +1,14 @@
 'user strict';
 
 {
+  const d = [2019, 11, 14];
 
-// const point = {
-//   x: 100,
-//   y: 180,
-// };
+  // console.log(d.join('/'));
 
-// const keys = Object.keys(point);
-// keys.forEach(key => {
-//   console.log(`Key: ${key} Value: ${point[key]}`);
-// })
-
-const points = [
-  {x: 30, y: 20},
-  {x: 10, y: 50},
-  {x: 40, y: 40},
-];
-console.log(points[1].y);
+  const t = '17:08:24';
+  // console.log(t.split(':'));
+  const [hour, minute, second] = t.split(':');
+  console.log(hour);
+  console.log(minute);
+  console.log(second);
 }
