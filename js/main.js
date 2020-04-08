@@ -1,15 +1,40 @@
 'user strict';
 
 {
-  let i = 0;
-  function showTime() {
-    console.log(new Date());
-    const timeoutId = setTimeout(showTime, 1000);
-    i++;
-    if(i > 2) {
-      clearTimeout(timeoutId);
+  class Post {
+    constructor(text) {
+      this.text = text;
+      this.likeCount = 0
+    }
+
+    show() {
+      console.log(`${this.text} - ${this.likeCount}Likes`);
+    }
+
+    like() {
+      this.likeCount++;
+      this.show();
     }
   }
 
-  showTime();
+  class SponsoredPost extends Post {
+    constructor(text, sponsor) {
+      super(text);
+      this.sponsor = sponsor;
+    }
+
+    show() {
+      super.show();
+      console.log(`... sponsored by ${this.sponsor}`)
+    }
+  }
+  const posts = [
+    new Post('JavaScriptの勉強中・・・'),
+    new Post('プログラミング楽しい！'),
+    new SponsoredPost('3プン動画でマスターしよう', 'dotinstall'),
+  ];
+
+  posts[2].show();
+  posts[2].like();
+
 }
