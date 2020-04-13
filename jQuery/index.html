@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>jQueryの練習</title>
+  <style>
+    .myStyle {
+      border: 5px solid green;
+      font-size: 48px;
+    }
+  </style>
+</head>
+<body>
+  <p>jQueryの練習</p>
+  <button>Add!</button>
+
+  <script src="jquery.min.js"></script>
+  <script>
+    // $(document).ready(function () {
+    $(function() {
+      // $('p').css('color', 'red').css('background', 'blue');
+      // console.log($('p').css('color'));
+      // console.log($('a').attr('href'));
+      // $('p').text('just changed');
+      // $('p').html('<a href="">click me!</a>');
+      // $('input').val('hello, again!');
+      // var li = $('<li>').text('just added');
+      // $('ul > li:eq(1)').before(li);
+      // $('ul').append(li);
+      // $('#box').hide(3000);
+      // $('#box').fadeOut(3000);
+      // $('#box').toggle(3000);
+      // $('#box').toggle(3000);
+      // $('#box').toggle(3000);
+      // $('#box').toggle(3000);
+      // $('#box').fadeOut(800, function() {
+      //   alert("gone!");
+      // });
+      // $('#box').click(function() {
+      //   alert("hi!");
+      // });
+
+      // $('#box')
+      // .mouseover(function() {
+      //   $(this).css('background', 'green');
+      // })
+      // .mousemove(function(e) {
+      //   $(this).text(e.pageX);
+      // })
+      // $('#name')
+      // .focus(function() {
+      //   $(this).css('background', 'red');
+      // })
+      // .blur(function() {
+      //   $(this).css('background', 'white');
+      // });
+      // $('#members').change(function() {
+      //   alert('changed!');
+      // });
+      $('button').click(function() {
+        var p = $('<p>').text('vanish!').addClass('vanish');
+        $(this).before(p);
+      });
+      // $('.vanish').click(function() {
+      //   $(this).remove();
+      // });
+      $('body').on('click', '.vanish', function() {
+        $(this).remove();
+      });
+    });
+  </script>
+</body>
+</html>
